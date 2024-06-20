@@ -6,46 +6,57 @@
     <title>Random Bible Verse</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #f0f4c3, #e1f5fe);
         }
         .container {
             text-align: center;
             background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
         }
         h1 {
+            color: #4a90e2;
             margin-bottom: 10px;
+            font-size: 2em;
         }
         p {
             font-size: 1.2em;
             margin-bottom: 20px;
+            color: #555;
+        }
+        .verse {
+            margin: 20px 0;
+            font-size: 1.1em;
+            color: #333;
         }
         .buttons {
             display: flex;
-            justify-content: center;
-            gap: 10px;
+            justify-content: space-between;
         }
         .buttons button {
             padding: 10px 20px;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 1em;
             cursor: pointer;
+            flex: 1;
+            margin: 0 5px;
         }
         .buttons button.generate {
-            background-color: #007bff;
+            background-color: #4caf50;
             color: #fff;
         }
         .buttons button.copy {
-            background-color: #28a745;
+            background-color: #ff9800;
             color: #fff;
         }
         footer {
@@ -58,8 +69,8 @@
 <body>
     <div class="container">
         <h1>Random Bible Verse</h1>
-        <p>Generate a holy word.</p>
-        <div id="verse" style="margin-bottom: 20px;">📖 Your verse will appear here</div>
+        <p>Get inspired by a holy word.</p>
+        <div id="verse" class="verse">📖 Your verse will appear here.</div>
         <div class="buttons">
             <button class="generate" onclick="generateVerse()">Generate Bible</button>
             <button class="copy" onclick="copyVerse()">Copy Holy Word</button>
