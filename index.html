@@ -83,7 +83,7 @@
         async function generateVerse() {
             document.getElementById('verse').textContent = '⏱️ | Fetching a random Bible verse, please wait...';
             try {
-                const response = await fetch('https://deku-rest-api-gadz.onrender.com/bible');
+                const response = await fetch('https://joshweb.click/bible');
                 const data = await response.json();
                 const verse = data.verse;
                 const reference = data.reference;
